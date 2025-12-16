@@ -8,9 +8,9 @@ Formål
 
 Formålet med SP4-IDS-Light er at:
 
-	•	opdage mistænkelig adfærd baseret på simple regler
-	•	gemme og vise trusler, så visse hændelser kan analyseres.
-	•	fungere som et fundament, der senere kan udvides med flere regler og logtyper
+	opdage mistænkelig adfærd baseret på simple regler
+	gemme og vise trusler, så visse hændelser kan analyseres.
+	fungere som et fundament, der senere kan udvides med flere regler og logtyper
 
 Funktionelle krav
 
