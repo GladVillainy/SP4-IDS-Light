@@ -3,9 +3,11 @@
 
 SP4-IDS-Light er et letvægts Intrusion Detection System (IDS) udviklet i Java. Systemet er designet som et simpelt konsolprogram, der analyserer logdata og genererer alerts, som kan bruges til efterfølgende analyse af sikkerhedshændelser.
 ⸻
+
 Formål
 
 Formålet med SP4-IDS-Light er at:
+
 	•	opdage mistænkelig adfærd baseret på simple regler
 	•	gemme og vise trusler, så visse hændelser kan analyseres.
 	•	fungere som et fundament, der senere kan udvides med flere regler og logtyper
