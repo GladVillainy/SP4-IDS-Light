@@ -1,55 +1,84 @@
 # SP4-IDS-Light
-⸻
 
-SP4-IDS-Light er et letvægts Intrusion Detection System (IDS) udviklet i Java. Systemet er designet som et simpelt konsolprogram, der analyserer logdata og genererer alerts, som kan bruges til efterfølgende analyse af sikkerhedshændelser.
-⸻
+SP4-IDS-Light is a lightweight **Intrusion Detection System (IDS)** developed in **Java**.
+The system is implemented as a console-based application that analyzes log data and detects suspicious behavior using simple, rule-based logic.
 
-Formål
+The project is intended as a foundational IDS solution that can be extended with additional detection rules and log formats.
 
-Formålet med SP4-IDS-Light er at:
+## Background and Scope
 
-    opdage mistænkelig adfærd baseret på simple regler
-	gemme og vise trusler, så visse hændelser kan analyseres.
-	fungere som et fundament, der senere kan udvides med flere regler og logtyper
+This project is built on top of the **SP3 Streaming Service project**, which serves as its technical foundation.  
+While SP3 focused primarily on streaming functionality, SP4-IDS-Light extends the solution with a strong emphasis on **security monitoring and intrusion detection**.
 
-Funktionelle krav
+The system is intended for environments with **strict security requirements and monitoring needs**, such as applications, software systems, or server-based solutions where log analysis and threat detection are relevant.
 
-Systemet opfylder følgende funktionelle krav:
+It is important to note that this is a **student project** developed for educational purposes.  
+The system is **not intended for production use** and does not meet the security, reliability, or compliance standards required for real-world deployment.
 
-1. Visning af tidligere trusler
-   
-Systemet kan give en liste over tidligere genererede trusler.
-Dette gør det muligt at analysere hændelser efterfølgende og skabe overblik over, hvad der er sket i systemet.
+---
 
-Trusler gemmes under kørsel via en csv-fil og kan vises via konsollen.
+## Purpose
 
-2. Simpelt og forståeligt system
-   
-Systemet er designet til at være let at anvende og forstå:
-	•	output præsenteres klart i konsollen
-	•	fokus er på grundlæggende IDS-funktionalitet frem for komplekse sikkerhedsmekanismer
+The purpose of SP4-IDS-Light is to:
 
-4. Konsolbaseret program
-   
-SP4-IDS-Light kører udelukkende som et konsolprogram:
-	•	ingen grafisk brugerflade
-	•	egnet til køre, at køre på en arbejdesplads.
+* detect suspicious behavior in log files
+* record and store security-related events (threats)
+* provide an overview of previous incidents via the console
+* serve as an extensible foundation for further IDS development
 
-5. Opfanger
-   
- •	Log in's ude for et bestemt tidsrum
- •  For mange mislykket login forsøg (Bruteforce)
- •  Sletning i fil linjer
- • Bliver ovenstående opfanget bliver brugeren låst
+---
 
+## Functional Requirements
 
-6. Teknologi
+### 1. Threat Detection and History
 
- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="32"/>
-   Sprog: Java
-   
-   Kørselsform: Konsolapplikation
+The system is capable of storing and displaying previously detected threats.
 
-Projektstatus
+* Threats are stored during runtime in a CSV file
+* Historical threats can be viewed via the console
+* Enables post-incident analysis of security events
 
-SP4-IDS-Light er et studieprojekt og skal betragtes som et proof-of-concept snarere end et produktionsklart IDS.
+### 2. Simple and Understandable Design
+
+The system is designed with simplicity and clarity in mind:
+
+* clear and structured console output
+* focus on core IDS functionality
+* avoids complex security mechanisms
+
+### 3. Console-Based Application
+
+SP4-IDS-Light runs exclusively as a console application:
+
+* no graphical user interface
+* suitable for server and workstation environments
+
+### 4. Detected Events
+
+The system can detect the following types of suspicious behavior:
+
+* login attempts outside a defined time window
+* repeated failed login attempts (brute-force attacks)
+* deletion of lines in log files
+
+If any of the above events are detected, the system can automatically **lock the user**.
+
+---
+
+## Technology
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="32"/>
+
+* **Language:** Java
+* **Execution:** Console application
+* **Data Storage:** CSV files
+
+---
+
+## Project Status
+
+The project is under development and can be extended with:
+
+* additional detection rules
+* support for more log formats
+* more advanced event analysis
